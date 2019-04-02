@@ -1,0 +1,7 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <label class="checkboxlabel" formArrayName="flags" *ngFor="let control of form.controls.flags.controls; let i = index">
+    <input type="checkbox" [formControlName]="i">
+  </label>
+  <button>Add</button>
+</form>
+

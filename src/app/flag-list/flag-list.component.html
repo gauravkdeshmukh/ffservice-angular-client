@@ -1,0 +1,11 @@
+<div>
+  <div class="flagnames">
+    <div *ngFor="let flag of flags">
+      <label>{{ flag.name }}</label>
+    </div>
+  </div>
+  <div *ngFor="let item of (items | async)">
+    <label>{{ item.name }}</label>
+    <app-flag [flagName]="item.name" [flagValue]="item.valueBits" [flags]="flags"></app-flag>
+  </div>
+</div>
